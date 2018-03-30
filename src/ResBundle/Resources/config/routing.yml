@@ -1,0 +1,103 @@
+res_homepage:
+    path:     /
+    defaults: { _controller: ResBundle:Default:index }
+
+
+res_security:
+   path : /security
+   defaults: { _controller:ResBundle:Security:index }
+
+
+admin_users_delete:
+   path : /security/users/delete/{id}
+   defaults: 
+     _controller : ResBundle:Security:delete
+   requirements:
+      id: \d+
+
+admin_users_add:
+    path : /security/users/add
+    defaults : { _controller:ResBundle:Security:add}
+
+admin_sites:
+    path: /sites
+    defaults : { _controller:ResBundle:Site:index}
+
+admin_sites_add:
+    path : /sites/add
+    defaults : { _controller:ResBundle:Site:add}
+
+admin_sites_edit:
+    path: /sites/edit/{id}
+    defaults: 
+      _controller: ResBundle:Site:edit
+    requirements:
+      id: \d+
+
+admin_sites_delete:
+    path: /sites/delete/{id}
+    defaults: 
+      _controller: ResBundle:Site:delete
+    requirements:
+      id: \d+
+
+admin_sites_rooms:
+    path: /sites/rooms/{id}
+    defaults:
+      _controller: ResBundle:Site:rooms
+    requirements:
+      id: \d+
+
+
+admin_rooms:
+    path: /rooms
+    defaults : { _controller:ResBundle:Rooms:index}
+
+admin_rooms_add:
+    path : /rooms/add
+    defaults : { _controller:ResBundle:Rooms:add}
+
+admin_rooms_edit:
+    path: /rooms/edit/{id}
+    defaults: 
+      _controller: ResBundle:Rooms:edit
+    requirements:
+      id: \d+
+
+admin_rooms_delete:
+    path: /rooms/delete/{id}
+    defaults: 
+      _controller: ResBundle:Rooms:delete
+    requirements:
+      id: \d+
+
+admin_reservations:
+    path : /reservations
+    defaults:
+      { _controller: ResBundle:Reservation:index}
+
+admin_reservations_add:
+   path : /reservations/add
+   defaults:
+    _controller: ResBundle:Reservation:add
+
+admin_reservations_edit:
+    path: /reservations/edit/{id}
+    defaults:
+      _controller: ResBundle:Reservation:edit
+    requirements:
+      id: \d+
+
+admin_reservations_delete:
+    path : /reservations/delete/{id}
+    defaults:
+     _controller: ResBundle:Reservation:delete
+    requirements:
+     id: \d+
+
+admin_reservations_view:
+    path: /reservations/view/{id}
+    defaults:
+      _controller: ResBundle:Reservation:view
+    requirements:
+      id: \d+

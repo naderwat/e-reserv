@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}project-manager{% endblock %}</title>
+      {% block stylesheets %}
+
+    <link href="{{asset('assets/')}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('assets/')}}font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="{{asset('assets/')}}css/animate.css" rel="stylesheet">
+    <link href="{{asset('assets/')}}css/style.css" rel="stylesheet">
+        {% endblock%}
+</head>
+
+<body class="gray-bg">
+
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="font-bold"></h2>
+
+                <img width="220px" alt="image" class="img-responsive" src="{{ asset('assets/')}}img/profile_small.jpg" />
+
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    
+                      {% block body %}
+          
+                       {% endblock body%}
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-6">
+               
+            </div>
+            <div class="col-md-6 text-right">
+                 <strong>e-reserv-lhc</strong><small>&nbsp;© {{ "now" | date('Y')}}</small>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

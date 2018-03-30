@@ -1,0 +1,32 @@
+    {% extends '::base.html.twig' %}
+    {% block title%} Sites-{{parent()}} {% endblock%}
+
+
+    {% block body %}
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2><i class="fa fa-flag-o"></i> Gestion des sites</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{path('admin_sites') }}">Sites</a>
+                        </li>
+                        <li class="active">
+                            <strong>Ajout</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-8">
+                    <div class="title-action">
+                        <a href="{{path('admin_sites')}}" class="btn btn-primary"><i class="fa fa-list"></i> Sites</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-content">
+                <div class="ibox-content">
+                    {{form(form)}}
+                </div>
+            </div>
+
+    {% endblock  %}
